@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+<uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        android:fullBackupContent="@xml/backup_descriptor">
+        <activity
+            android:name=".activities.SplashScreen_Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.Prayers_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <activity
+            android:name=".activities.Kibla_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activities.Home_Programe_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activities.Settings_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <receiver android:name=".widget.SmallWidgetProvider"
+            android:exported="true"
+            android:icon="@drawable/small_widget"
+            android:label="Small Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/small_widget_provider" />
+        </receiver>
+
+        <receiver android:name=".widget.SmallWidgetProviderBroadcastReceiver"/>
+
+        <receiver android:name=".widget.LargeWidgetProvider"
+            android:exported="true"
+            android:icon="@drawable/large_widget"
+            android:label="Large Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/large_widget_provider" />
+        </receiver>
+
+        <receiver android:name=".widget.LargeWidgetProviderBroadcastReceiver"/>
+
+        <receiver
+            android:name=".classes.StartServiceAtStartupDevice"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".classes.AthanServiceBroasdcastReceiver" android:exported="false" />
+
+        <receiver android:name=".classes.RefreshWidgetAfter15Minutes" android:exported="false" />
+
+        <service
+            android:name=".classes.AthanService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.premssion.BIND_JOb_SERVICE">
+        </service>
+
+        <service
+            android:name=".widget.LargeWidgetProviderService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.premssion.BIND_JOb_SERVICE">
+        </service>
+
+        <service
+            android:name=".widget.SmallWidgetProviderService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.premssion.BIND_JOb_SERVICE">
+        </service>
+
+        <receiver android:name=".classes.RefreshDayServiceManager"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".Athan.AthanStopReceiver" android:exported="false" >
+        </receiver>
+
+    </application>
+
+
+</manifest>

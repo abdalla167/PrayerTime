@@ -45,7 +45,7 @@ public class Prayers_Activity extends Activity {
     private TextView asr;
     private TextView maghrib;
     private TextView ishaa;
-    int selected1 = 0;
+
     private TextView fajr_label;
     private TextView shorouk_label;
     private TextView duhr_label;
@@ -458,85 +458,12 @@ public class Prayers_Activity extends Activity {
         this.ishaa = ishaa;
     }
 
-    public TextView getFajr_label() {
-        return fajr_label;
-    }
 
-    public void setFajr_label(TextView fajr_label) {
-        this.fajr_label = fajr_label;
-    }
-
-    public TextView getShorouk_label() {
-        return shorouk_label;
-    }
-
-    public void setShorouk_label(TextView shorouk_label) {
-        this.shorouk_label = shorouk_label;
-    }
-
-    public TextView getDuhr_label() {
-        return duhr_label;
-    }
-
-    public void setDuhr_label(TextView duhr_label) {
-        this.duhr_label = duhr_label;
-    }
-
-    public TextView getAsr_label() {
-        return asr_label;
-    }
-
-    public void setAsr_label(TextView asr_label) {
-        this.asr_label = asr_label;
-    }
-
-    public TextView getMaghrib_label() {
-        return maghrib_label;
-    }
-
-    public void setMaghrib_label(TextView maghrib_label) {
-        this.maghrib_label = maghrib_label;
-    }
-
-    public TextView getIshaa_label() {
-        return ishaa_label;
-    }
-
-    public void setIshaa_label(TextView ishaa_label) {
-        this.ishaa_label = ishaa_label;
-    }
-
-    public TextView getLocation_country() {
-        return location_country;
-    }
 
     public void setLocation_country(TextView location_country) {
         this.location_country = location_country;
     }
 
-    public TextView getLocation_city() {
-        return location_city;
-    }
-
-    public void setLocation_city(TextView location_city) {
-        this.location_city = location_city;
-    }
-
-    public TextView getMiladi_label() {
-        return miladi_label;
-    }
-
-    public void setMiladi_label(TextView miladi_label) {
-        this.miladi_label = miladi_label;
-    }
-
-    public TextView getHijri_label() {
-        return hijri_label;
-    }
-
-    public void setHijri_label(TextView hijri_label) {
-        this.hijri_label = hijri_label;
-    }
 
     public String getLatitude() {
         return latitude;
@@ -578,117 +505,7 @@ public class Prayers_Activity extends Activity {
         this.language = language;
     }
 
-    public String getFajr_athan() {
-        return fajr_athan;
-    }
 
-    public void setFajr_athan(String fajr_athan) {
-        this.fajr_athan = fajr_athan;
-    }
-
-    public String getShorouk_athan() {
-        return shorouk_athan;
-    }
-
-    public void setShorouk_athan(String shorouk_athan) {
-        this.shorouk_athan = shorouk_athan;
-    }
-
-    public String getDuhr_athan() {
-        return duhr_athan;
-    }
-
-    public void setDuhr_athan(String duhr_athan) {
-        this.duhr_athan = duhr_athan;
-    }
-
-    public String getAsr_athan() {
-        return asr_athan;
-    }
-
-    public void setAsr_athan(String asr_athan) {
-        this.asr_athan = asr_athan;
-    }
-
-    public String getMaghrib_athan() {
-        return maghrib_athan;
-    }
-
-    public void setMaghrib_athan(String maghrib_athan) {
-        this.maghrib_athan = maghrib_athan;
-    }
-
-    public String getIshaa_athan() {
-        return ishaa_athan;
-    }
-
-    public void setIshaa_athan(String ishaa_athan) {
-        this.ishaa_athan = ishaa_athan;
-    }
-
-    public Button getFajr_athan_button() {
-        return fajr_athan_button;
-    }
-
-    public void setFajr_athan_button(Button fajr_athan_button) {
-        this.fajr_athan_button = fajr_athan_button;
-    }
-
-    public Button getShorouk_athan_button() {
-        return shorouk_athan_button;
-    }
-
-    public void setShorouk_athan_button(Button shorouk_athan_button) {
-        this.shorouk_athan_button = shorouk_athan_button;
-    }
-
-    public Button getDuhr_athan_button() {
-        return duhr_athan_button;
-    }
-
-    public void setDuhr_athan_button(Button duhr_athan_button) {
-        this.duhr_athan_button = duhr_athan_button;
-    }
-
-    public Button getAsr_athan_button() {
-        return asr_athan_button;
-    }
-
-    public void setAsr_athan_button(Button asr_athan_button) {
-        this.asr_athan_button = asr_athan_button;
-    }
-
-    public Button getMaghrib_athan_button() {
-        return maghrib_athan_button;
-    }
-
-    public void setMaghrib_athan_button(Button maghrib_athan_button) {
-        this.maghrib_athan_button = maghrib_athan_button;
-    }
-
-    public Button getIshaa_athan_button() {
-        return ishaa_athan_button;
-    }
-
-    public void setIshaa_athan_button(Button ishaa_athan_button) {
-        this.ishaa_athan_button = ishaa_athan_button;
-    }
-
-    public Typeface getTf() {
-        return tf;
-    }
-
-    public void setTf(Typeface tf) {
-        this.tf = tf;
-    }
-
-    public AlertDialog getAlertDialog() {
-        return alertDialog;
-    }
-
-    public void setAlertDialog(AlertDialog alertDialog) {
-        this.alertDialog = alertDialog;
-    }
 
     private String getNextPrayerName() {
         String nextPrayerName = getResources().getString(R.string.not_set);

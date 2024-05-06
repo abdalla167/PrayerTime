@@ -64,7 +64,7 @@ import java.util.TimeZone;
 
 
 public class Settings_Activity extends Activity implements LocationListener{
-
+	private String finalCalculationMethode="";
 	private double latitude = 0;
 	private double longitude = 0;
 	private double latitude_fromList = 0;
@@ -522,7 +522,8 @@ public class Settings_Activity extends Activity implements LocationListener{
 			this.calculatonMethode_row.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					calulationMethodHandler();
+
+					//calulationMethodHandler();
 				}
 			});
 			
@@ -711,11 +712,8 @@ public class Settings_Activity extends Activity implements LocationListener{
 	 this.alertDialog = builder.create();
 	 this.alertDialog.show();
 	}
-	
-	public void calulationMethodHandler()
-	{
-	}
-	
+
+
 	public void typeTimeHandler(){
 		AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AlertDialogCustom);
 			builder.setTitle(getResources().getString(R.string.type_time));

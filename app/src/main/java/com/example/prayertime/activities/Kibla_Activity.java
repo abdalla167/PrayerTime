@@ -443,36 +443,7 @@ public class Kibla_Activity extends Activity implements LocationListener, Sensor
 	    return activeNetworkInfo != null && activeNetworkInfo.isConnected();
 	}
 	
-	public void setUserConfig(){
-		   try {
-			   PreferenceHandler.getSingleton().addUserConfig(UserConfig.getSingleton());
-		} catch (Exception e) {
 
-				Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-
-			finish();
-		}
-
-		startService(new Intent(this, AthanService.class));
-
-		try//update large widget
-		{
-			Intent intent = new Intent(getApplicationContext() , LargeWidgetProvider.class);
-			intent.setAction("android.appwidget.action.APPWIDGET_UPDATE");
-			int ids[] = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), LargeWidgetProvider.class));
-			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
-			sendBroadcast(intent);
-		}catch(Exception e){}
-
-		try//update small widget
-		{
-			Intent intent = new Intent(getApplicationContext() , SmallWidgetProvider.class);
-			intent.setAction("android.appwidget.action.APPWIDGET_UPDATE");
-			int ids[] = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), SmallWidgetProvider.class));
-			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
-			sendBroadcast(intent);
-		}catch(Exception e){}
-	}
 	
 	private void setDefaultLanguage(String language){
 		String languageToLoad = language;

@@ -32,6 +32,7 @@
                 android:drawablePadding="16dp"
                 android:imeOptions="actionNext"
                 android:inputType="text"
+           android:visibility="gone"
                 />
 
             <!-- //////////////////////////////////////////////////////////////////////////// -->
@@ -352,7 +353,9 @@
                     android:id="@+id/row_type_time"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:minHeight="50.0dip" >
+                    android:minHeight="50.0dip"
+                    android:visibility="gone"
+                    >
 
                     <LinearLayout
                         android:layout_width="0dip"

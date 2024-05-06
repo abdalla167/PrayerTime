@@ -133,7 +133,9 @@
         android:layout_marginTop="12dp"
         android:background="@android:color/transparent"
         android:baselineAligned="false"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
 
         <LinearLayout
             android:id="@+id/previous_day_prayer_times_linearlayout"
@@ -200,7 +202,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+
+                >
 
                 <LinearLayout
                     android:layout_width="0dip"
@@ -256,6 +260,11 @@
 
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+
+                />
             <LinearLayout
                 android:id="@+id/row_shorouk"
                 android:layout_width="fill_parent"
@@ -315,7 +324,11 @@
                 </LinearLayout>
 
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
 
+                />
             <LinearLayout
                 android:id="@+id/row_duhr"
                 android:layout_width="fill_parent"
@@ -376,7 +389,11 @@
                 </LinearLayout>
 
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
 
+                />
             <LinearLayout
                 android:id="@+id/row_asr"
                 android:layout_width="fill_parent"
@@ -436,7 +453,11 @@
                 </LinearLayout>
 
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
 
+                />
             <LinearLayout
                 android:id="@+id/row_maghreb"
                 android:layout_width="fill_parent"

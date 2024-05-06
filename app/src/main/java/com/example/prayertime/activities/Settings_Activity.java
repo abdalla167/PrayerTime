@@ -182,8 +182,8 @@ public class Settings_Activity extends Activity implements LocationListener{
 	
 	private TextView latitude_value;
 	private TextView longitude_value;
-	private EditText country_edittext;
-	private EditText city_edittext;
+	private TextView country_edittext;
+	private TextView city_edittext;
 	private TextView latitude_label_inflat;
 	private TextView longitude_label_inflat;
 	private TextView country_label_inflat;
@@ -1347,8 +1347,8 @@ public class Settings_Activity extends Activity implements LocationListener{
 			    
 			    latitude_value = (TextView) view.findViewById(R.id.latitude_value);
 				longitude_value = (TextView) view.findViewById(R.id.longitude_value);
-				country_edittext = (EditText) view.findViewById(R.id.country_edittext);
-				city_edittext = (EditText) view.findViewById(R.id.city_edittext);
+				country_edittext = (TextView) view.findViewById(R.id.country_edittext);
+				city_edittext = (TextView) view.findViewById(R.id.city_edittext);
 				
 				latitude_label_inflat = (TextView) view.findViewById(R.id.latitude_label);
 				longitude_label_inflat = (TextView) view.findViewById(R.id.longitude_label);

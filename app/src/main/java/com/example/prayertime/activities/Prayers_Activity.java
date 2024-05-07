@@ -537,7 +537,7 @@ public class Prayers_Activity extends Activity {
 
     private void setActualPrayerBackground(int actualPrayerCode) {
         findViewById(R.id.row_fajr).setBackground(getResources().getDrawable(R.drawable.tab_menu_active));
-        findViewById(R.id.row_fajr).setBackground(getResources().getDrawable(R.drawable.navy_background));
+   //     findViewById(R.id.row_fajr).setBackground(getResources().getDrawable(R.drawable.navy_background));
 
         findViewById(R.id.row_shorouk).setBackground(getResources().getDrawable(R.drawable.tab_menu_active));
         findViewById(R.id.row_shorouk).setBackground(getResources().getDrawable(R.drawable.navy_background));
